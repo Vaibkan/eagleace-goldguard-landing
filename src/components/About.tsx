@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.png";
-import securityStaff from "@/assets/security-staff.png";
+import eagleElectrician from "@/assets/eagleacepics/eagleelectrician.jpeg";
 
 const About = () => {
   return (
@@ -94,11 +94,14 @@ const About = () => {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden">
+            <div className="rounded-2xl overflow-hidden relative aspect-[4/3]">
               <img
-                src={securityStaff}
-                alt="Eagle Ace security professionals on duty"
-                className="w-full h-auto object-cover"
+                src={eagleElectrician}
+                alt="Eagle Ace electrician professional"
+                className="w-full h-full object-cover object-center"
+                style={{ 
+                  filter: 'brightness(1.05) contrast(1.05)'
+                }}
               />
             </div>
           </div>

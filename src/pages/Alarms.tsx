@@ -4,8 +4,31 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Smartphone, Bell, Home, Building, Zap } from "lucide-react";
 import alarmPanelImage from "@/assets/alarm-panel.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Alarms = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate('/');
+    // Use window.location.hash to ensure proper scrolling after navigation
+    window.location.hash = 'contact';
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Fallback: try again after a longer delay
+        setTimeout(() => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500);
+      }
+    }, 300);
+  };
   const features = [
     {
       icon: Shield,
@@ -89,7 +112,7 @@ const Alarms = () => {
                 Protect what matters most with our advanced alarm technology and expert installation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact">
+                <a href="/#contact" onClick={handleContactClick}>
                   <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
                     <Shield className="h-4 w-4 mr-2" />
                     Get Free Quote
@@ -150,7 +173,7 @@ const Alarms = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact Eagle Ace today for a free security consultation and customized alarm system quote for your home or business in Auckland and Waikato.
           </p>
-          <a href="#contact">
+          <a href="/#contact" onClick={handleContactClick}>
             <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
               <Shield className="h-4 w-4 mr-2" />
               Get Free Quote

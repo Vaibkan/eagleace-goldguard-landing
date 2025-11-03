@@ -147,7 +147,7 @@ const Appliances = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact Eagle Ace today for a free consultation and quote for your appliance installation needs in Auckland and Waikato.
           </p>
-          <a href="#contact">
+          <a href="/#contact">
             <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
               <Wrench className="h-4 w-4 mr-2" />
               Get Free Quote

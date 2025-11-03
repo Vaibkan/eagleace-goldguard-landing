@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Phone, MapPin } from "lucide-react";
+import { Shield } from "lucide-react";
 import heroImage from "@/assets/hero-security.jpg";
 
 const Hero = () => {
@@ -39,16 +39,12 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="#contact">
+            <a href="/#contact">
               <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
                 <Shield className="h-4 w-4 mr-2" />
                 Get Free Quote
               </Button>
             </a>
-            <Button variant="outline" size="lg" className="text-base px-8 py-4 h-auto font-medium">
-              <Phone className="h-4 w-4 mr-2" />
-              +64 274 224 714
-            </Button>
           </div>
           
           {/* Stats */}

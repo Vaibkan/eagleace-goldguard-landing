@@ -1,5 +1,5 @@
 import eagleLogo from "@/assets/eagleacelogo.jpeg";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -62,10 +62,6 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">Contact</h4>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">+64 274 224 714</span>
-              </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">info@eagleace.co.nz</span>

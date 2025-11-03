@@ -87,7 +87,7 @@ const Products = () => {
         </div>
 
         <div className="text-center mt-20">
-          <a href="#contact">
+          <a href="/#contact">
             <Button variant="outline" size="lg" className="text-base px-8 py-4 h-auto font-medium border-2 hover:bg-primary hover:text-white">
               <Shield className="h-4 w-4 mr-2" />
               Get Custom Quote

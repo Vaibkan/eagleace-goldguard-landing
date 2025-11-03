@@ -33,10 +33,10 @@ const Header = () => {
             <a href="/electrical" className="text-gray-300 hover:text-primary transition-colors font-medium">
               Electrical
             </a>
-            <a href="#about" className="text-gray-300 hover:text-primary transition-colors font-medium">
+            <a href="/#about" className="text-gray-300 hover:text-primary transition-colors font-medium">
               About
             </a>
-            <a href="#contact" className="text-primary font-semibold hover:text-primary/80 transition-colors">
+            <a href="/#contact" className="text-primary font-semibold hover:text-primary/80 transition-colors">
               Contact
             </a>
           </nav>
@@ -51,7 +51,7 @@ const Header = () => {
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#contact">
+            <a href="/#contact">
               <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-2 rounded-lg">
                 Get Quote
               </Button>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -86,21 +86,6 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  Call Us Now
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-primary mb-2">+64 274 224 714</p>
-                <p className="text-muted-foreground">24/7 Emergency Support Available</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border bg-card">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   Email Us
@@ -139,8 +124,7 @@ const Contact = () => {
               <CardContent>
                 <div className="space-y-1">
                   <p className="text-foreground">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p className="text-foreground">Saturday: 9:00 AM - 4:00 PM</p>
-                  <p className="text-foreground">Sunday: Emergency calls only</p>
+                  <p className="text-foreground">Saturday - Sunday: Emergency calls only</p>
                 </div>
               </CardContent>
             </Card>

@@ -4,8 +4,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Wrench, Home, Building, Lightbulb, Settings } from "lucide-react";
 import sensorsImage from "@/assets/sensors.jpg";
+import houseLighting1 from "@/assets/eagleacepics/houselighting.jpeg";
+import houseLighting2 from "@/assets/eagleacepics/houselighting2.jpeg";
+import houseLighting4 from "@/assets/eagleacepics/houselighting4.jpeg";
+import houseLighting5 from "@/assets/eagleacepics/houselighting5.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Electrical = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate('/');
+    // Use window.location.hash to ensure proper scrolling after navigation
+    window.location.hash = 'contact';
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Fallback: try again after a longer delay
+        setTimeout(() => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500);
+      }
+    }, 300);
+  };
   const features = [
     {
       icon: Settings,
@@ -87,7 +114,7 @@ const Electrical = () => {
                 work for residential and commercial properties.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact">
+                <a href="/#contact" onClick={handleContactClick}>
                   <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
                     <Zap className="h-4 w-4 mr-2" />
                     Get Free Quote
@@ -101,6 +128,55 @@ const Electrical = () => {
                 alt="Electrical Services" 
                 className="rounded-2xl shadow-2xl"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lighting Gallery Section */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              House Lighting Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional lighting installations that transform your home with beautiful, functional lighting designs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
+              <img 
+                src={houseLighting1} 
+                alt="House Lighting Installation 1" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
+              <img 
+                src={houseLighting2} 
+                alt="House Lighting Installation 2" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
+              <img 
+                src={houseLighting4} 
+                alt="House Lighting Installation 4" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
+              <img 
+                src={houseLighting5} 
+                alt="House Lighting Installation 5" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
         </div>
@@ -138,7 +214,6 @@ const Electrical = () => {
         </div>
       </section>
 
-
       {/* CTA Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-6 text-center">
@@ -148,7 +223,7 @@ const Electrical = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact Eagle Ace today for a free electrical consultation and quote for your home or business in Auckland and Waikato.
           </p>
-          <a href="#contact">
+          <a href="/#contact" onClick={handleContactClick}>
             <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
               <Zap className="h-4 w-4 mr-2" />
               Get Free Quote

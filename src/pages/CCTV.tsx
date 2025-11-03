@@ -4,8 +4,31 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Camera, Shield, Smartphone, Eye, Zap, Wrench } from "lucide-react";
 import camerasImage from "@/assets/cameras.jpg";
+import { useNavigate } from "react-router-dom";
 
 const CCTV = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate('/');
+    // Use window.location.hash to ensure proper scrolling after navigation
+    window.location.hash = 'contact';
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Fallback: try again after a longer delay
+        setTimeout(() => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500);
+      }
+    }, 300);
+  };
   const features = [
     {
       icon: Camera,
@@ -85,7 +108,7 @@ const CCTV = () => {
                 Keep your property secure with our advanced camera technology and expert installation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact">
+                <a href="/#contact" onClick={handleContactClick}>
                   <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
                     <Camera className="h-4 w-4 mr-2" />
                     Get Free Quote
@@ -146,7 +169,7 @@ const CCTV = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact Eagle Ace today for a free CCTV consultation and customized quote for your home or business in Auckland and Waikato.
           </p>
-          <a href="#contact">
+          <a href="/#contact" onClick={handleContactClick}>
             <Button variant="premium" size="lg" className="text-base px-8 py-4 h-auto font-medium">
               <Camera className="h-4 w-4 mr-2" />
               Get Free Quote
