@@ -12,7 +12,7 @@ const About = () => {
             Why Choose Eagle Ace?
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-            Auckland and Waikato's most trusted professionals for security alarm installations, CCTV camera setups, electrical work, and appliance installations 
+            Auckland and Waikato's most trusted professionals for electrical work, security alarm installations, CCTV camera setups, and appliance installations 
             for both residential and commercial properties across the region.
           </p>
           
@@ -123,7 +123,7 @@ const About = () => {
               <h4 className="text-xl font-semibold text-primary mb-3">🛡️ Trusted by Auckland and Waikato</h4>
               <p className="text-muted-foreground font-light leading-relaxed">
                 Join 50+ satisfied customers who trust Eagle Ace for their 
-                security and electrical needs across Auckland and Waikato and surrounding areas.
+                electrical and security needs across Auckland and Waikato and surrounding areas.
               </p>
             </div>
           </div>

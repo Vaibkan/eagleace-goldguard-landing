@@ -16,7 +16,7 @@ const Header = () => {
             />
             <div>
               <h1 className="text-xl font-semibold text-white">Eagle Ace</h1>
-              <p className="text-sm text-gray-300 font-medium">Security & Electrical</p>
+                <p className="text-sm text-gray-300 font-medium">Electrical & Security</p>
             </div>
           </a>
           

@@ -17,11 +17,11 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold text-foreground">Eagle Ace</h3>
-                <p className="text-sm text-muted-foreground">Security & Electrical Solutions</p>
+                <p className="text-sm text-muted-foreground">Electrical & Security Solutions</p>
               </div>
             </div>
             <p className="text-muted-foreground">
-              Auckland and Waikato's trusted security and electrical solutions provider. Protecting and powering homes and businesses 
+              Auckland and Waikato's trusted electrical and security solutions provider. Protecting and powering homes and businesses 
               with cutting-edge technology and professional service.
             </p>
           </div>
@@ -88,8 +88,8 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Eagle Ace Security & Electrical Solutions. All rights reserved. | 
-            <span className="text-primary"> Licensed Security & Electrical Installer</span>
+            © 2024 Eagle Ace Electrical & Security Solutions. All rights reserved. | 
+            <span className="text-primary"> Licensed Electrical & Security Installer</span>
           </p>
         </div>
       </div>
